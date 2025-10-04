@@ -1,5 +1,3 @@
-import { Platform } from 'react-native';
-
 export type PushPreferences = {
   enabled: boolean;
   lastUpdated: number;
@@ -11,7 +9,8 @@ const DEFAULT_PREFERENCES: PushPreferences = {
 };
 
 export function shouldEnablePushNotifications(): boolean {
-  return Platform.OS !== 'android' ? false : false;
+  // TODO: enable platform-specific push notification check once backend is ready.
+  return false;
 }
 
 export async function registerPushNotifications(): Promise<PushPreferences> {

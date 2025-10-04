@@ -10,7 +10,7 @@
     "lint": "pnpm --filter @yui/mobile run lint",
     "test": "pnpm --filter @yui/mobile run test",
     "start": "pnpm --filter @yui/mobile run start",
-    "ios": "pnpm --filter @yui/mobile run ios",
+    "ios": "pnpm --filter @yui/mobile run ios:reset",
     "android": "pnpm --filter @yui/mobile run android"
   }
 }

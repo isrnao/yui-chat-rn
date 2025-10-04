@@ -39,8 +39,5 @@
   "devDependencies": {
     "@supabase/supabase-js": "^2.39.6",
     "typescript": "~5.5.4"
-  },
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
-  "types": "./src/index.ts"
+  }
 }

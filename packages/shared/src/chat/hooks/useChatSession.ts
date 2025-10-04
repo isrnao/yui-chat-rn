@@ -101,11 +101,13 @@ export function useChatSession(options: UseChatSessionOptions): UseChatSessionRe
         }
         const next = new Set(prev);
         next.delete(optimisticUuid);
-        next.add(serverChat.uuid);
+        if (realtime) {
+          next.add(serverChat.uuid);
+        }
         return next;
       });
     },
-    [maxItems],
+    [maxItems, realtime],
   );
 
   const refresh = useCallback(async () => {

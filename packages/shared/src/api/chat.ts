@@ -162,7 +162,7 @@ export function createChatApi(config: ChatApiConfig): ChatApi {
     const data = await withRetry(async () => {
       const { data: rows, error } = await supabase
         .from(table)
-        .select('uuid,name,color,message,time,system,email,ip,ua,optimistic,client_time')
+        .select('uuid,name,color,message,time,system,email,ip,ua')
         .order('uuid', { ascending: false })
         .limit(maxRows);
 
@@ -209,7 +209,7 @@ export function createChatApi(config: ChatApiConfig): ChatApi {
     const result = await withRetry(async () => {
       const { data: rows, count, error } = await supabase
         .from(table)
-        .select('uuid,name,color,message,time,system,email,ip,ua,optimistic,client_time', {
+        .select('uuid,name,color,message,time,system,email,ip,ua', {
           count: 'exact',
         })
         .order('uuid', { ascending: false })
