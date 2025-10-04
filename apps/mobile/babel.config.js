@@ -6,7 +6,17 @@ module.exports = {
     [
       'module-resolver',
       {
-        extensions: ['.ios.ts', '.android.ts', '.ts', '.tsx', '.js', '.jsx', '.json'],
+        extensions: [
+          '.native.ts',
+          '.native.tsx',
+          '.ios.ts',
+          '.android.ts',
+          '.ts',
+          '.tsx',
+          '.js',
+          '.jsx',
+          '.json',
+        ],
         alias: {
           '@yui/shared': path.resolve(__dirname, '../../packages/shared/src'),
         },
