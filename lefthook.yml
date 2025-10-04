@@ -3,7 +3,7 @@ pre-commit:
   jobs:
     - name: eslint
       run: pnpm --filter @yui/mobile exec eslint --fix {staged_files}
-      files: git diff --cached --name-only --diff-filter=ACM | grep -E '\\.(js|jsx|ts|tsx)$' || true
+      files: git diff --cached --name-only --diff-filter=ACM | grep -E '\.(js|jsx|ts|tsx)$' || true
 # Uncomment the following section if you want to enable pre-push hooks
 # pre-push:
 #   parallel: true
